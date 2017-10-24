@@ -29,7 +29,7 @@
   <div class="image-gallery">
     <ul id="image-slider">
       {% for image in page.images %}
-         {{ image }}
+        <li class="pull-left"><img src="{{ image  | absolute_url }}"></li>
       {% endfor %}
     </ul>
   </div>
