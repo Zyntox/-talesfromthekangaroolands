@@ -1,5 +1,5 @@
 {% include header.html %}
-{% include base.html %}
+{% include base.html%}
 <div id="main-content">
   <div id="main-board" class="pull-left">
     <div id="left-arrow" class="page-selector pull-left" onclick="post.goToPreviousSection()">
@@ -7,7 +7,7 @@
     </div>
       <div class="middle-section pull-left">
         <div class="content-wrapper">
-          <a href="{{ base }}/frontpage.html#post-listing" class="back-link"> Back to posts</a>
+          <a href="{{ '/frontpage#post-listing' | absolute_url }}" class="back-link"> Back to posts</a>
           <!-- <div class="pageNavigation">
             {% if page.previous.url %}
             <a class="prev pull-left" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
