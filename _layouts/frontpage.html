@@ -4,7 +4,7 @@
     <div class="header-text">
       <div class="top-row">
         <h1>Tales from the</h1>
-          <img src="{{ 'assets/img/kangaroo.svg' | absolute_url }}" alt="">
+          <img src="{{ base }} /assets/img/kangaroo.svg" alt="">
         <h1> -lands</h1>
       </div>
       <h2>2017 - 2018 <div id="question">?</div></h2>
@@ -23,9 +23,9 @@
       {% assign sorted = site.posts | reverse %}
       {% for post in sorted %}
 
-      <a  class="post" href="{{ post.url | absolute_url }}">
+      <a  class="post" href="{{ base }}{{ post.url }}">
         <div>
-          <img src="{{ post.thumbnail | absolute_url }}" alt="there is supposed to be a thumbnail here. :'(">
+          <img src="{{ base }}{{ post.thumbnail }}" alt="there is supposed to be a thumbnail here. :'(">
           <span>{{ post.title }}</span>
         </div>
       </a>
