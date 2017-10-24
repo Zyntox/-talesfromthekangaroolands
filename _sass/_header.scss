@@ -1,0 +1,68 @@
+#header {
+  color: #fff;
+  background-color: #2B2A2A;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  padding: 0 20px 0 70px;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  overflow: hidden;
+
+  .accent-color{
+    color: #f5d243;
+  }
+
+  #header-logo{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #header-logo:visited{
+    color: #fff;
+  }
+
+  h1{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 15px 0px;
+  }
+
+  img{
+    display: inline-block;
+    position: relative;
+    top:10px;
+    padding-left:2px;
+    width: 40px;
+  }
+
+  .header-menu{
+    padding: 27px 0px;
+
+    ul{
+      list-style: none;
+
+      li{
+        margin: 0px 20px;
+      }
+
+      #options:hover .fade-box{
+        display: block;
+      }
+
+    }
+  }
+}
+
+.fade-box{
+  display: none;
+  position: fixed;
+  top: 52px;
+  height: calc(100vh - 52px);
+  width: 100vw;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2000;
+  color: #fff;
+}

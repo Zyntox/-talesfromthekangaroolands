@@ -1,0 +1,139 @@
+#frontpage{
+
+  #header-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2B2A2A;
+    z-index: 9999;
+    position: relative;
+    text-align: center;
+    background-image: url('../assets/img/australia.svg');
+    background-position: bottom center;
+    background-size: cover;
+
+
+    .header-text{
+      display: inline-block;
+      color: #fff;
+      position: relative;
+      top: 48vh;
+
+      .top-row{
+        border-bottom: 1px solid #fff;
+        margin-bottom: 20px;
+
+        h1{
+          display: inline-block;
+          padding-bottom: 12px;
+          letter-spacing: 10px;
+          font-family: 'Josefin Sans', sans-serif;
+          font-weight: 300;
+        }
+
+        img{
+          display: inline-block;
+          position: relative;
+          top:20px;
+          padding-left:2px;
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+
+      h2{
+        letter-spacing: 12px;
+        font-size: 40px;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      h3{
+        margin-top: 50px;
+        font-weight: 100;
+        font-family: 'Josefin Sans', sans-serif;
+      }
+
+      #question{
+        display: inline;
+        position: absolute;
+        color: #2B2A2A;
+      }
+
+      span{
+        color: #ffda45;
+      }
+
+    }
+  }
+
+  #post-listing{
+    text-align: center;
+    padding: 50px 0px;
+
+
+    h1{
+      display: inline-block;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      padding: 5px 20px;
+      border-bottom: 1px solid grey;
+      font-size: 20px;
+      letter-spacing: 5px;
+    }
+
+    p{
+      margin-top: 30px;
+      display: inline-block;
+      line-height: 35px;
+      font-weight: 100;
+      width: 600px;
+      font-size: 20px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .author{
+      font-family: 'Indie Flower', cursive;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .post-container{
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 20px 20px;
+
+      .post{
+        text-align: left;
+        padding: 10px;
+        background-color: #fff;
+        margin: 10px;
+        min-width: 300px;
+        max-width: 200px;
+        widows: calc(100% * (1/4) - 10px);
+
+        img{
+          object-fit: cover;
+          object-position: top;
+          max-height: 165px;
+          width: 100%;
+        }
+
+        span{
+          display: inline-block;
+          padding: 10px 0px 5px 0px;
+          color: #2B2A2A;
+          text-decoration: none;
+          font-family: 'Indie Flower', cursive;
+        }
+      }
+    }
+  }
+}

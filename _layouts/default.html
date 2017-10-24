@@ -1,0 +1,38 @@
+{% include header.html %}
+
+<div id="main-content">
+  <div id="main-board" class="pull-left">
+    <div id="left-arrow" class="page-selector pull-left" onclick="post.goToPreviousSection()">
+      <div><</div>
+    </div>
+      <div class="middle-section pull-left">
+        <div class="content-wrapper">
+          <a href="{{ '/frontpage#post-listing' | absolute_url }}" class="back-link"> Back to posts</a>
+          <!-- <div class="pageNavigation">
+            {% if page.previous.url %}
+            <a class="prev pull-left" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="next pull-right" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+            {% endif %}
+          </div> -->
+          <ul id="story-slider">
+            {{ content }}
+          </ul>
+        </div>
+      </div>
+      <span class="page-indicator"> Page: <span id="page-index">1</span> of <span id="final-page">{{ page.sections }}</span></span>
+    <div id="right-arrow" class="page-selector pull-right" onclick="post.goToNextSection()">
+      <div>></div>
+    </div>
+  </div>
+  <div class="image-gallery">
+    <ul id="image-slider">
+      {% for image in page.images %}
+         {{ image }}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% include footer.html %}
