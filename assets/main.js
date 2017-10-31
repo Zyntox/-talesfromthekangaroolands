@@ -1,14 +1,32 @@
 var post = (function(){
   var pageIndex = document.getElementById('page-index');
   var finalPage = document.getElementById('final-page');
-
   var sectionList = document.getElementById('story-slider');
   var sectionWidth = sectionList.children[0].offsetWidth;
   var textSliderPosition = 0;
-
   var imageSlider = document.getElementById('image-slider');
   var imageWidth = imageSlider.children[0].offsetWidth;
   var imageSliderPosition = 0;
+
+
+  if(window.attachEvent) {
+      window.attachEvent('onresize', function() {
+        console.log("I'm executing");
+        sectionWidth = sectionList.children[0].offsetWidth;
+        imageWidth = imageSlider.children[0].offsetWidth;
+      });
+  }
+  else if(window.addEventListener) {
+      window.addEventListener('resize', function() {
+        console.log("I'm executing");
+        sectionWidth = sectionList.children[0].offsetWidth;
+        imageWidth = imageSlider.children[0].offsetWidth;
+      }, true);
+  }
+  else {
+      //The browser does not support Javascript event binding
+  }
+
 
   var updatePageIndex = function(type){
     if (type == "increment"){
