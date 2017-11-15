@@ -11,17 +11,27 @@ var post = (function(){
 
   if(window.attachEvent) {
       window.attachEvent('onresize', function() {
-        console.log("I'm executing");
         sectionWidth = sectionList.children[0].offsetWidth;
         imageWidth = imageSlider.children[0].offsetWidth;
       });
   }
   else if(window.addEventListener) {
       window.addEventListener('resize', function() {
-        console.log("I'm executing");
         sectionWidth = sectionList.children[0].offsetWidth;
         imageWidth = imageSlider.children[0].offsetWidth;
       }, true);
+
+      window.addEventListener('keydown', function(event){
+        var code = event.keyCode || event.which;
+        console.log(code);
+        if (code === 39){
+          post.goToNextSection();
+        } else if (code === 37){
+          post.goToPreviousSection();
+        }
+      });
+
+
   }
   else {
       //The browser does not support Javascript event binding
